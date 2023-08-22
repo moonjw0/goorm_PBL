@@ -1,0 +1,29 @@
+.movie-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 360px;
+    
+}
+
+.list-name {
+    font-size: 25px;
+    font-weight: bold;
+    padding: 5px 5px;
+}
+
+.movie-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.movie {
+    width: 150px;
+    height: 200px;
+    padding: 10px 20px
+}
+
+.movie:hover {
+    cursor: pointer;
+    transition-duration: 2s;
+    transform: scale(1.2, 1.2);
+}
