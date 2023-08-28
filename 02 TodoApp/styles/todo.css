@@ -1,0 +1,50 @@
+.todo-list { 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.todo-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  margin: 5px;
+  padding: 20px 15px;
+  border-radius: 10px;  
+  background-color: lightblue;
+}
+.todo-content { 
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.todo-input {
+  border: none;
+  background-color: lightblue;
+  font-size: 15px;
+  padding-left: 8px;
+}
+
+.todo-modify {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.write, .delete {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  fill: lightcoral;
+}
+
+.write:hover {
+  cursor: pointer;
+}
+
+.delete:hover {
+  cursor: pointer;
+}

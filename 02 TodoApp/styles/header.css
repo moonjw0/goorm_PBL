@@ -1,0 +1,31 @@
+.header {
+  height: 40px;
+
+  display: flex;
+  flex-direction: column; /* 왜 row가 아니지 */
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 5px;
+}
+
+.app-title {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.app-title:hover {
+  cursor: pointer;
+}
+
+.add-todo {
+  font-size: 15px;
+  text-decoration: underline;
+}
+
+.add-todo:hover {
+  cursor: pointer;
+}
