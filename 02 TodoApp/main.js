@@ -1,33 +1,38 @@
-const add_todo = document.querySelector("#add_todo");
+const add_todo = document.querySelector(".add-todo"); // 새로운 TODO 추가하기 버튼
+const add_loc = document.querySelector(".todo-list"); // 추가할 위치
 
-add_todo.addEventListener('click', () => {
-  const new_todo = document.createElement('div');
+let todo_list = [];
 
+add_todo.addEventListener('click', () => { // 새로운 TODO 추가
+  let new_todo = document.createElement('form');
+
+  new_todo.setAttribute("class", "todo-container");
   new_todo.innerHTML = `
-  <form class="todo-container">
-      <div class="todo-content">
-        <input type="checkbox">
-        <input id="todo" class="todo-input" type="text" placeholder="할 일 작성!!!!!">
-      </div>
-      <div class="todo-modify">
-        <img id="write" class="write" src="assets/icon/pencil.svg">
-        <img class="delete" src="assets/icon/delete.svg">
-      </div>
-  </form>
+    <div class="todo-content">
+      <input type="checkbox">
+      <input class="input" type="text" placeholder="할 일 작성!!!!!">
+    </div>
+    <div class="todo-modify">
+      <img class="write" src="assets/icon/pencil.svg">
+      <img class="delete" src="assets/icon/delete.svg">
+    </div>
   `;
+  const todo_input = new_todo.querySelector(".input") // 긱 TODO별 id 설정 - input
+  const todo_write = new_todo.querySelector(".write") // 긱 TODO별 id 설정 - write
+  const todo_delete = new_todo.querySelector(".delete") // 긱 TODO별 id 설정 - delete
+  todo_input.id = todo_list.length + 1;
+  todo_write.id = todo_list.length + 1;
+  todo_delete.id = todo_list.length + 1;
 
-  const add_loc = document.getElementById('add_loc');
   add_loc.appendChild(new_todo);
-  console.log('추가');
 })
 
+add_loc.addEventListener('click', (event) => { // TODO 내용 삭제
 
-
-
-// const write_todo = document.getElementById("#write");
-// // let todo_input = document.getElementById("#todo");
-
-//  write_todo.addEventListener('click', () => {
-//    const new_todo = todo_input.value;
-//    console.log(new_todo);
-// })
+  if(event.target.className === 'delete'){
+    console.log('hello');
+    const remove_todo = event.target.parentNode.parentNode;
+    console.log(remove_todo);
+    remove_todo.remove();
+  }
+})
