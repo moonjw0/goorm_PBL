@@ -15,6 +15,15 @@
   border-radius: 10px;  
   background-color: lightblue;
 }
+
+.todo-container:hover {
+  border: 1px solid white;
+}
+
+.todo-container:focus-within {
+  border: 1px solid white;
+}
+
 .todo-content { 
   display: flex;
   justify-content: flex-start;
@@ -26,6 +35,11 @@
   background-color: lightblue;
   font-size: 15px;
   padding-left: 8px;
+}
+
+.input:focus {
+  outline: none;
+  border-bottom: solid white 2px;
 }
 
 .todo-modify {
@@ -43,6 +57,7 @@
 
 .write:hover {
   cursor: pointer;
+  opacity: 0.7;
 }
 
 .delete:hover {

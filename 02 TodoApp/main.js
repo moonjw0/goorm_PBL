@@ -1,6 +1,5 @@
 const add_todo = document.querySelector(".add-todo"); // 새로운 TODO 추가하기 버튼
 const add_loc = document.querySelector(".todo-list"); // 추가할 위치
-
 let todo_list = [];
 
 add_todo.addEventListener('click', () => { // 새로운 TODO 추가
@@ -22,8 +21,30 @@ add_todo.addEventListener('click', () => { // 새로운 TODO 추가
 
   todo_list.push('');
   add_loc.appendChild(new_todo);
+
+  todo_input.focus();
+  todo_input.parentNode.parentNode.focus();
 })
 
+add_loc.addEventListener('click', (event) => { // todo-container -> input 활성화
+  if(event.target.className === 'todo-container'){
+    const todo_input = event.target.querySelector(".input"); // container 영역의 input 값
+    if(todo_input){
+      todo_input.focus();
+    }
+  }
+})
+
+add_loc.addEventListener('click', (event) => { // checkbox 클릭
+  if(event.target.type === 'checkbox'){
+    const todo_input = event.target.nextElementSibling;// checkbox와 같은 영역의 input 값
+    const todo_container = event.target.parentNode.parentNode; // input의 container
+    if(todo_input){
+      todo_input.style.textDecorationLine = "line-through";
+      todo_container.style.opacity = 0.7;
+    }
+  }
+})
 
 add_loc.addEventListener('click', (event) => { // TODO 내용 추가 + localStorage 저장
   if(event.target.className === 'write'){
@@ -38,7 +59,6 @@ add_loc.addEventListener('click', (event) => { // TODO 내용 추가 + localStor
   }
 })
 
-
 add_loc.addEventListener('click', (event) => { // TODO 내용 삭제 + localStorage 삭제
   if(event.target.className === 'delete'){
     const remove_todo = event.target.parentNode.parentNode;
@@ -50,6 +70,5 @@ add_loc.addEventListener('click', (event) => { // TODO 내용 삭제 + localStor
     // todo_list.splice(inputid, 1);
     // splice 쓰려면 inputid 값 바꾸는 법 필요
     delete todo_list[inputid];
-    console.log(todo_list);
   }
 })
