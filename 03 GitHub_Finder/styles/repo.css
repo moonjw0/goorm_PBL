@@ -1,0 +1,35 @@
+.repo {
+  display: flex;
+
+  margin: 5px;
+  flex-direction: column;
+}
+
+.latest-repos {
+  padding-top: 10px;
+  padding-bottom: 5px;
+  font-size: 30px;
+}
+
+.repo-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 5px;
+  padding: 15px;
+  border: 1px solid lightgrey;
+  border-radius: 3px;
+}
+
+.repo-title {
+  font-size: 15px;
+  flex-grow: 1;
+}
+
+.repo-status {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+}
+/* repo-status  중간배치 필요 */

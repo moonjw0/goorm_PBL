@@ -1,0 +1,66 @@
+.profile {
+  display: flex;
+
+  flex-direction: row;
+  margin-top: 20px;
+  margin-left: 5px;
+  padding: 10px 10px;
+  border: 1px solid lightgrey;
+  border-radius: 4px;
+}
+
+.profile-left {
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+}
+
+.pic {
+  height: 180px;
+  width: 150px;
+  background-color: black;
+  margin-bottom: 10px;
+}
+
+.view-button {
+  padding: 8px;
+  background-color: cornflowerblue;
+  border: 1px solid cornflowerblue;
+  border-radius: 10px;
+  font-size: 12px;
+  color: white;
+}
+
+.profile-right {
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+}
+
+.info-staus {
+  display: flex;
+  flex-direction: row;
+  margin-left: 5px;
+}
+
+.status {
+  margin-right: 5px;
+  padding: 5px 15px;
+  border-radius: 3px;
+  color: white;
+  font-size: 12px;
+}
+
+table {
+  margin: 10px 5px;
+  border-collapse: collapse;
+}
+
+tr {
+  border: 1px solid lightgrey;
+}
+
+td {
+  padding: 15px;
+  font-size: 13px;
+}
