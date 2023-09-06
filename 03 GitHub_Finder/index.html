@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="styles/search.css">
   <link rel="stylesheet" href="styles/info.css">
   <link rel="stylesheet" href="styles/repo.css">
+  <link rel="stylesheet" href="styles/footer.css">
 </head>
 <body>
   <header class="header">
@@ -16,34 +17,33 @@
   <section class="search">
       <span class="search-title"><b>Search Github Users</b></span>
       <span class="search-content">Enter a username to fetch a user profile and repos</span>
-      <input type="text" class="search-input">
+      <input type="text" id="username" class="search-input" placeholder="사용자 이름 입력 후 엔터">
   </section>
 
   <section class="profile">
     <div class="profile-left">
-      <!-- <img class="pic" src=""> -->
-      <span class="pic"></span>
+      <img id="pic" class="pic">
       <button class="view-button">View Profile</button>
     </div>
     <div class="profile-right">   
       <div class="info-staus">
-        <span class="status" style="background-color: cornflowerblue;">Public Repos</span>
-        <span class="status" style="background-color: grey">Public Gists</span>
-        <span class="status" style="background-color: mediumseagreen">Followers</span>
-        <span class="status" style="background-color: green">Followings</span>
+        <span id="public_repos" class="status" style="background-color: cornflowerblue;">Public Repos: </span>
+        <span id="public_gists" class="status" style="background-color: grey">Public Gists: </span>
+        <span id="followers" class="status" style="background-color: mediumseagreen">Followers: </span>
+        <span id="followings" class="status" style="background-color: green">Followings: </span>
       </div>
       <table>
         <tr>
-          <td>Company: </td>
+          <td id="company">Company: </td>
         </tr>
         <tr>
-          <td>Website/Blog: </td>
+          <td id="blog">Website/Blog: </td>
         </tr>
         <tr>
-          <td>Location: </td>
+          <td id="location">Location: </td>
         </tr>
         <tr>
-          <td>Member Since: </td>
+          <td id="member_since">Member Since: </td>
         </tr>
       </table>
     </div>
@@ -51,14 +51,13 @@
 
   <section class="repo">
     <span class="latest-repos"><b>Latest Repos</b></span>
-    <div class="repo-content">
-      <span class="repo-title">react-disney-deploy-test</span>
-      <div class="repo-staus">
-        <span class="status" style="background-color: cornflowerblue;">Stars: </span>
-        <span class="status" style="background-color: grey">Watchers: </span>
-        <span class="status" style="background-color: mediumseagreen">Forks: </span>
-      </div>
-    </div>
+    <div id="repo-container"></div>
   </section>
+
+  <footer id="footer" class="footer">
+    <span class="footer-title">Github Finder</span>
+  </footer>
+  
+  <script defer src="main.js"></script>
 </body>
 </html>

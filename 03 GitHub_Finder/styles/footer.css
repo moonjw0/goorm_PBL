@@ -1,0 +1,17 @@
+.footer {
+  display: flex;
+  
+  justify-content: space-around;
+  align-items: center;
+  height: 40px;
+  background-color: rgb(240, 240, 240);
+
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.footer-title {
+  font-size: 15px;
+}
