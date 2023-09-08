@@ -13,10 +13,32 @@ function ClickEvent(event) {
     col_focus.style.background = 'lightskyblue';
 }
 
+function ExportTable() {
+    let Table = document.getElementById('table');
+    let tempTable = document.createElement('table'); // 테이블 복사
+
+    let Rows = Array.from(Table.rows).slice(1, 10);
+    Rows.forEach(row => {
+        let tempRow = row.cloneNode(false);
+        let Cells = Array.from(row.cells).slice(1, 10);
+        
+        Cells.forEach(cell => { 
+            let clonedCell = cell.cloneNode(false) // 셀 복사
+            clonedCell.textContent = cell.firstChild.value ? cell.firstChild.value : " ";
+            tempRow.appendChild(clonedCell); // 행에 셀 추가
+        });
+        tempTable.appendChild(tempRow); // 테이블에 행 추가
+    });
+    //내보내기
+    let obj = XLSX.utils.table_to_book(tempTable);
+    XLSX.writeFile(obj, 'test.xlsx');
+}
+
+// 셀 표시 & 내보내기
 const inputs = document.querySelectorAll('input');
+const export_button = document.getElementById('export');
+
 inputs.forEach(input => {
     input.addEventListener('click', ClickEvent);
 })
-
-const export_button = document.getElementById('export');
-export_button.addEventListener('click', exportTableToExcel('table', 'test'));
+export_button.addEventListener('click', ExportTable);
