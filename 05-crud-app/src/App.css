@@ -1,0 +1,64 @@
+body {
+  background-color: rgb(231, 177, 108);
+}
+
+.container {
+  margin: auto;
+  max-width: 600px;
+  padding-left: 20px;
+}
+
+.calculator {
+  background-color: white;
+  padding: 20px 10px;
+}
+
+.Expenditure-container {
+  display: flex;
+  flex-direction: row;
+  margin-left: 10px;
+  color: rgb(231, 177, 108);
+}
+
+.Expenditure-input, .Expenditure-price{
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  margin-right: 10px;
+  padding-bottom: 10px;
+  color: rgb(231, 177, 108);
+}
+
+.input {
+  margin-top: 10px;
+  border: none;
+  border-bottom: 2px solid lightgrey;
+  outline: none;
+}
+
+.submitBtn{
+  padding: 8px 10px;
+  background-color: rgb(128, 160, 83);
+  color: white;
+  font-size: 12px;
+  border: none;
+  border-radius: 3px;
+  outline: none;
+}
+
+
+.Expenditure-list{
+  display: flex;
+  margin-top: 20px;
+  flex-direction: column;
+}
+
+.deleteBtn{
+  padding: 8px 10px;
+  background-color: rgb(128, 160, 83);
+  color: white;
+  font-size: 12px;
+  border: none;
+  border-radius: 3px;
+  outline: none;
+}
