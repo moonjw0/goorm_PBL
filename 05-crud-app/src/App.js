@@ -51,11 +51,7 @@ export default function App() {
           onClick={handleSubmit}
         />
 
-<<<<<<< HEAD
         <Lists budgetData={budgetData} setTitle={setTitle} setCost={setCost} setBudgetData={setBudgetData}/>
-=======
-        <Lists budgetData={budgetData} setBudgetData={setBudgetData}/>
->>>>>>> 82eca10 (feat: category/product 구현)
         <input 
           className='submitBtn'
           type="submit"

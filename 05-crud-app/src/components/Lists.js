@@ -1,10 +1,6 @@
 import React from "react";
 
-<<<<<<< HEAD
 export default function Lists({budgetData, setTitle, setCost, setBudgetData}) {
-=======
-export default function Lists({budgetData, setBudgetData}) {
->>>>>>> 82eca10 (feat: category/product 구현)
 
   const itemStyle = () => {
     return {
@@ -27,16 +23,11 @@ export default function Lists({budgetData, setBudgetData}) {
   };
 
   const handleEdit = (id) => {
-<<<<<<< HEAD
     let EditData = budgetData.filter((data) => data.id == id);
     setTitle(EditData[0].title);
     setCost(EditData[0].cost);
   };
 
-=======
-
-  };
->>>>>>> 82eca10 (feat: category/product 구현)
   const handleDelete = (id) => { // 항목 삭제
     let newBudgetData = budgetData.filter((data) => data.id !== id);
     setBudgetData(newBudgetData);
