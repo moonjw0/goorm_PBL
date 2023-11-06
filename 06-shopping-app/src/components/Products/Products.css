@@ -1,0 +1,21 @@
+.products{
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  margin: 10px;
+}
+
+.products__show {
+  margin: 10px;
+}
+
+.products__container{
+  /* display: flex;
+  width: 100%;
+  align-items: center; */
+  display: grid;
+  max-width: 1440px;
+  grid-template-columns: repeat(3, 1fr); /* 4개의 동일한 크기의 컬럼 생성 */
+  /* gap: 16px; 카드 사이의 간격 */
+}

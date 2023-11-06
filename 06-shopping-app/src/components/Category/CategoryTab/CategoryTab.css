@@ -1,0 +1,15 @@
+.category{
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border: solid black 1px;
+  border-radius: 5px;
+  margin: 10px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.category.selected{
+  background-color: gray;
+}
